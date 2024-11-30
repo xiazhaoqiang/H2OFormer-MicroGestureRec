@@ -1,0 +1,58 @@
+# feeder
+feeder: feeders.SMG_2.Feeder
+train_feeder_args:
+  data_path: .\semi-subject-independent\val
+  label_path: train
+  debug: False
+  random_choose: True
+  random_shift: False
+  random_move: False
+  window_size: 52
+  normalization: False
+  repeat: 1
+  point_nums: 25
+
+val_feeder_args:
+  data_path: .\semi-subject-independent\val
+  label_path: val
+  debug: False
+  window_size: 52
+  point_nums: 25
+
+test_feeder_args:
+  data_path: .\semi-subject-independent\test
+  label_path: test
+  debug: False
+  window_size: 52
+  point_nums: 25
+
+# model
+model: model.H2OFormer_e10d4.Model
+model_args:
+  num_class: 2
+  num_point: 25
+  num_person: 1
+  graph: graph.smg.Graph
+  graph_args:
+    labeling_mode: 'spatial'
+    num_point: 25
+  joint_label: [0, 0, 0, 0, 1,
+                1, 1, 1, 1, 1,
+                1, 1, 2, 2, 2,
+                2, 2, 2, 2, 2,
+                0, 3, 3, 3, 3]
+
+#optim
+weight_decay: 0
+base_lr: 0.0005
+lr_decay_rate: 0.1
+step: [110, 120]
+
+# training
+device: 0
+batch_size: 32
+val_batch_size: 64
+test_batch_size: 16
+num_epoch: 100
+nesterov: True
+warm_up_epoch: 5
