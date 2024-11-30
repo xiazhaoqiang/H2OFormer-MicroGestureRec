@@ -46,23 +46,11 @@ python eval.py --result_dir ./result_dir/SMG/SSI_SMG_e10d4 --weights_dir ./work_
 
 ## Acknowledgements
 
-This code borrows heavily from the repo of [Hyperformer](https://github.com/ZhouYuxuanYX/Hyperformer). 
+This code is based on the repo of [Hyperformer](https://github.com/ZhouYuxuanYX/Hyperformer). 
 
 Thanks to the original authors for their work!
-
-```
-@article{zhou2022hypergraph,
-  title={Hypergraph Transformer for Skeleton-based Action Recognition},
-  author={Zhou, Yuxuan and Cheng, Zhi-Qi and Li, Chao and Geng, Yifeng and Xie, Xuansong and Keuper, Margret},
-  journal={arXiv preprint arXiv:2211.09590},
-  year={2022}
-}
-```
 
 ## Citation
 
 Coming soon...
-
-# Contact
-For any questions, feel free to contact: `zxia@nwpu.edu.cn`
 
